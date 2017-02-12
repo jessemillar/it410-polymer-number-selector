@@ -39,12 +39,20 @@
 				}
 			},
 			increment: function() {
-				if (this.value < this.maximum) {
+				if (!isNaN(this.maximum)) {
+					if (this.value < this.maximum) {
+						this.value++;
+					}
+				} else {
 					this.value++;
 				}
 			},
 			decrement: function() {
-				if (this.value > this.minimum) {
+				if (!isNaN(this.minimum)) {
+					if (this.value > this.minimum) {
+						this.value--;
+					}
+				} else {
 					this.value--;
 				}
 			}
