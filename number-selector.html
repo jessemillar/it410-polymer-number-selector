@@ -25,7 +25,18 @@
 		Polymer({
 			is: 'number-selector',
 			properties: {
-
+				value: {
+					type: Number,
+					value: 0
+				},
+				maximum: {
+					type: Number,
+					value: NaN
+				},
+				minimum: {
+					type: Number,
+					value: NaN
+				}
 			},
 			increment: function() {
 
