@@ -4,32 +4,36 @@
 
 <dom-module id="number-selector">
 
-  <template>
+	<template>
 
     <style>
       /* local DOM styles go here */
       :host {
         display: inline-block;
       }
+
+	  .display_value {
+		  font-weight: bold;
+	  }
     </style>
 
     <!-- local DOM goes here -->
+	<iron-icon icon='add-circle-outline'></iron-icon> <span class="display_value">{{value}}</span> <iron-icon icon='remove-circle-outline'></iron-icon>
   </template>
 
-  <script>
-  Polymer({
-    is: 'number-selector',
-    properties: {
+	<script>
+		Polymer({
+			is: 'number-selector',
+			properties: {
 
-    },
-    increment: function() {
+			},
+			increment: function() {
 
-    },
-    decrement: function() {
+			},
+			decrement: function() {
 
-    }
-  });
-  </script>
+			}
+		});
+	</script>
 
 </dom-module>
-
