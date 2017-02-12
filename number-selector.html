@@ -18,7 +18,7 @@
     </style>
 
     <!-- local DOM goes here -->
-	<iron-icon icon='add-circle-outline'></iron-icon> <span class="display_value">{{value}}</span> <iron-icon icon='remove-circle-outline'></iron-icon>
+	<iron-icon icon='add-circle-outline' on-tap="increment()"></iron-icon> <span class="display_value">{{value}}</span> <iron-icon icon='remove-circle-outline' on-tap="decrement()"></iron-icon>
   </template>
 
 	<script>
@@ -39,10 +39,14 @@
 				}
 			},
 			increment: function() {
-
+				if (this.value < maximum) {
+					this.value++;
+				}
 			},
 			decrement: function() {
-
+				if (this.value > minimum) {
+					this.value--;
+				}
 			}
 		});
 	</script>
